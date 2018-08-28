@@ -31,8 +31,6 @@ app.get("/api/friends", function (req, res) {
 // Create New Friend and compare with other friends
 app.post("/api/friends", function (req, res) {
   var newFriend = req.body;
-  var index = 0;
-  var value = compatScoreArray[0];
   var compatScoreArray = [];
   friendsArray.push(newFriend);
 
@@ -45,6 +43,8 @@ app.post("/api/friends", function (req, res) {
   }
 
   // Loops to find the lowest value in compatScoreArray
+  var index = 0;
+  var value = compatScoreArray[0];
   for (var i = 1; i < compatScoreArray.length; i++) {
     if (compatScoreArray[i] < value) {
       value = compatScoreArray[i];
