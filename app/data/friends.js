@@ -1,6 +1,6 @@
-// constructor function for creating student objects
+// constructor function for creating friend objects
 var friendsArray = [];
   
-// exporting our Student constructor
+// exporting friendsArray
 module.exports = friendsArray;
   

@@ -1,17 +1,18 @@
-// Dependencies
-// =============================================================
-var app = require("../app");
-
 // Routes
 // =============================================================
-  // Sends the home.html page if visited
+var HTMLRoutes = function (app, path) {
+  // Returns routes for HTML documents
   app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "/home.html"));
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
-  // Sends the survey.html page if visited
   app.get("/survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "/survey.html"));
+    res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
+}
+
+// Exports
+// =============================================================
+module.exports = HTMLRoutes;
 
 
