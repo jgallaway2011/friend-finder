@@ -1,6 +1,6 @@
 // Routes
 // =============================================================
-var HTMLRoutes = function (app, path) {
+module.exports = function (app, path) {
   // Returns routes for HTML documents
   app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
@@ -10,9 +10,5 @@ var HTMLRoutes = function (app, path) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
 }
-
-// Exports
-// =============================================================
-module.exports = HTMLRoutes;
 
 

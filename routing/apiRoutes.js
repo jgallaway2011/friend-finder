@@ -4,7 +4,7 @@ var friendsArray = require("../app/data/friends.js");
 
 // Routes
 // =============================================================
-var APIRoutes = function (app) {
+module.exports = function (app) {
 
   // Function will add up array values when called
   function sumArray(total, num) {
@@ -42,7 +42,3 @@ var APIRoutes = function (app) {
     res.json(friendsArray[index]);
   });
 }
-
-// Exports
-// =============================================================
-module.exports = APIRoutes;
